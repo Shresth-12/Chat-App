@@ -36,7 +36,7 @@ const MessageInput = ({ selectedUser, setMessages }) => {
 
     try {
       const { data } = await axios.post(
-        `http://localhost:3000/api/v1/message/send/${selectedUser._id}`,
+        `https://chat-app-backend-tlqu.onrender.com/api/v1/message/send/${selectedUser._id}`,
         {
           text: text.trim(),
           image: imagePreview,
