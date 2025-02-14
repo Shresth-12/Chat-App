@@ -12,7 +12,7 @@ export const SocketProvider = ({ children }) => {
     const userId = localStorage.getItem("userid");
     if (!userId || (socketInstance && socketInstance.connected)) return;
 
-    socketInstance = io("http://localhost:3000", {
+    socketInstance = io("https://chat-app-backend-tlqu.onrender.com", {
       query: {
          userId:userId 
         },
