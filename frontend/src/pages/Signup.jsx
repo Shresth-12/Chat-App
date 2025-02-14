@@ -34,7 +34,7 @@ export function Signup() {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/api/v1/user/signup", {
+      const response = await axios.post("https://chat-app-backend-tlqu.onrender.com/api/v1/user/signup", {
         email: Email,
         password: Password,
         fullName: fullName,
