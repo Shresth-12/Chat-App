@@ -28,7 +28,7 @@ export function Signin() {
     if (!/\S+@\S+\.\S+/.test(Email)) return toast.error("Enter a valid email");
     try{
     setLoading(true)
-    const response=await axios.post("http://localhost:3000/api/v1/user/signin",{
+    const response=await axios.post("https://chat-app-backend-tlqu.onrender.com/api/v1/user/signin",{
       email:Email,
       password:Password,
     })
