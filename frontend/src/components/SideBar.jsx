@@ -21,7 +21,7 @@ const Sidebar = ({ onSelectUser }) => {
         }
 
         const response = await axios.get(
-          "http://localhost:3000/api/v1/message/users",
+          "https://chat-app-backend-tlqu.onrender.com/api/v1/message/users",
           {
             headers: {
               Authorization: `Bearer ${token}`,
