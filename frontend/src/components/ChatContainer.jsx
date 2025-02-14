@@ -20,7 +20,7 @@ const ChatContainer = ({ selectedUser, setSelectedUser, authId, authpic }) => {
       setIsMessageLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/v1/message/${selectedUser._id}`,
+          `https://chat-app-backend-tlqu.onrender.com/api/v1/message/${selectedUser._id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
