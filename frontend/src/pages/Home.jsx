@@ -20,7 +20,7 @@ export function Home() {
 
   const getUserInfo = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/getuserinfo", { userId });
+      const response = await axios.post("https://chat-app-backend-tlqu.onrender.com/api/v1/user/getuserinfo", { userId });
       setAuthId(response.data.id)
       setAuthpic(response.data.image)
     } catch (error) {
