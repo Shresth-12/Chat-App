@@ -53,7 +53,7 @@ export function Profile() {
 
     try {
       const response = await axios.put(
-        "http://localhost:3000/api/v1/user/update-profile",
+        "https://chat-app-backend-tlqu.onrender.com/api/v1/user/update-profile",
         { profilepic: compressedImage },
         { headers: { "Authorization": `Bearer ${token}`,"Content-Type": "application/json" } }
       );
@@ -67,7 +67,7 @@ export function Profile() {
   // Fetch user info
   const getUserInfo = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/getuserinfo", { userId });
+      const response = await axios.post("https://chat-app-backend-tlqu.onrender.com/api/v1/user/getuserinfo", { userId });
       setEmail(response.data.email);
       setName(response.data.name);
       setCreated(new Date(response.data.time).toLocaleDateString());
